@@ -2,14 +2,13 @@
 <html lang="ko">
 <head>
   <meta charset="UTF-8" />
-  <title>불닭 레시피 추천기 (형용사 기반)</title>
+  <title>불닭 레시피 추천기</title>
   <style>
     body {
       font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
       margin: 0;
       background: #f5f5f5;
     }
-
     .container {
       max-width: 900px;
       margin: 40px auto;
@@ -18,28 +17,23 @@
       border-radius: 16px;
       box-shadow: 0 12px 32px rgba(0,0,0,0.08);
     }
-
     h1 {
       margin-top: 0;
       font-size: 28px;
     }
-
     .subtitle {
       color: #555;
       margin-bottom: 24px;
     }
-
     fieldset {
       border: none;
       margin-bottom: 20px;
       padding: 0;
     }
-
     legend {
       font-weight: 600;
       margin-bottom: 8px;
     }
-
     label {
       display: inline-flex;
       align-items: center;
@@ -48,12 +42,10 @@
       cursor: pointer;
       font-size: 14px;
     }
-
     input[type="radio"],
     input[type="checkbox"] {
       margin-right: 6px;
     }
-
     button {
       border: none;
       border-radius: 999px;
@@ -66,17 +58,14 @@
       box-shadow: 0 4px 12px rgba(255,107,107,0.4);
       transition: transform 0.08s ease, box-shadow 0.08s ease, opacity 0.15s;
     }
-
     button:hover {
       transform: translateY(-1px);
       box-shadow: 0 6px 18px rgba(255,107,107,0.5);
       opacity: 0.95;
     }
-
     .results {
       margin-top: 28px;
     }
-
     .recipe-card {
       background: #fff7f7;
       border-radius: 12px;
@@ -84,29 +73,24 @@
       margin-bottom: 12px;
       border: 1px solid #ffd4d4;
     }
-
     .recipe-title {
       font-weight: 700;
       margin-bottom: 4px;
     }
-
     .recipe-tags {
       font-size: 12px;
       color: #666;
       margin-bottom: 8px;
     }
-
     .recipe-desc {
       font-size: 14px;
       margin-bottom: 4px;
     }
-
     .recipe-howto {
       font-size: 13px;
       color: #555;
       white-space: pre-line;
     }
-
     .no-result {
       color: #777;
       font-size: 14px;
@@ -116,57 +100,28 @@
 </head>
 <body>
   <div class="container">
-    <h1>🔥 불닭 레시피 추천기 (형용사 기반)</h1>
+    <h1>🔥 불닭 레시피 추천기</h1>
     <p class="subtitle">
-      %%사이트 소개 문구%%<br />
-      %%형용사 카테고리와 세부 질문으로 취향을 나누는 설명%%
+      좋아하는 느낌(고급진 / 크리미한 / 고기와 함께 / 불닭게티)과<br />
+      계란·치즈 사용 여부를 선택하면 레시피를 추천해줍니다.
     </p>
 
     <!-- 질문 폼 -->
     <form id="question-form">
-      <!-- 1. %%맛 관련 형용사 카테고리%% -->
+      <!-- 카테고리 선택 -->
       <fieldset>
-        <legend>%%맛 관련 형용사 카테고리%%</legend>
-
-        <!-- ^^여기에 맛 관련 세부 질문 추가^^ -->
-        <!-- 예시: 
-        <label><input type="radio" name="taste" value="spicy" /> ^^매운^^</label>
-        <label><input type="radio" name="taste" value="savory" /> ^^고소한^^</label>
-        <label><input type="radio" name="taste" value="sweet" /> ^^달콤한^^</label>
-        -->
+        <legend>어떤 느낌의 불닭을 원하나요?</legend>
+        <label><input type="radio" name="category" value="luxury" required /> 고급진</label>
+        <label><input type="radio" name="category" value="creamy" /> 크리미한</label>
+        <label><input type="radio" name="category" value="meat" /> 고기와 함께</label>
+        <label><input type="radio" name="category" value="buldaghetti" /> 불닭게티</label>
       </fieldset>
 
-      <!-- 2. %%식감/느낌 형용사 카테고리%% -->
+      <!-- 세부 질문: 계란 / 치즈 -->
       <fieldset>
-        <legend>%%식감/느낌 형용사 카테고리%%</legend>
-
-        <!-- ^^여기에 식감/느낌 관련 세부 질문 추가^^ -->
-        <!-- 예시:
-        <label><input type="checkbox" name="texture_crispy" /> ^^바삭한^^</label>
-        <label><input type="checkbox" name="texture_chewy" /> ^^쫄깃한^^</label>
-        -->
-      </fieldset>
-
-      <!-- 3. %%분위기/상황 형용사 카테고리%% -->
-      <fieldset>
-        <legend>%%분위기/상황 형용사 카테고리%%</legend>
-
-        <!-- ^^여기에 상황/분위기 관련 세부 질문 추가^^ -->
-        <!-- 예시:
-        <label><input type="radio" name="mood" value="light" /> ^^가볍게^^</label>
-        <label><input type="radio" name="mood" value="heavy" /> ^^든든하게^^</label>
-        -->
-      </fieldset>
-
-      <!-- 4. %%기타 카테고리 (시간/난이도/재료 등)%% -->
-      <fieldset>
-        <legend>%%기타 카테고리 (시간/난이도/재료 등)%%</legend>
-
-        <!-- ^^여기에 기타 세부 질문 추가^^ -->
-        <!-- 예시:
-        <label><input type="radio" name="time" value="short" /> ^^10분 이내^^</label>
-        <label><input type="radio" name="time" value="medium" /> ^^20분 정도^^</label>
-        -->
+        <legend>재료 선택 (세부 질문)</legend>
+        <label><input type="checkbox" name="egg" /> 계란을 넣나요?</label>
+        <label><input type="checkbox" name="cheese" /> 치즈를 넣나요?</label>
       </fieldset>
 
       <button type="submit">레시피 추천받기</button>
@@ -177,40 +132,107 @@
   </div>
 
   <script>
-    // 불닭 레시피 데이터 예시
+    // 내부적으로 사용할 레시피 데이터
+    // 이름/설명/방법은 전부 "##"로 표시
     const recipes = [
       {
         id: 1,
-        name: "불닭치즈볶음면",
-        tags: ["%%매운%%", "%%고소한%%", "%%면 요리%%"],
-        desc: "치즈로 매운맛을 부드럽게 잡은 기본 불닭 응용 레시피.",
-        howto:
-          "1) 불닭을 삶아 소스와 함께 볶은 뒤,\n" +
-          "2) 불 끄고 치즈를 듬뿍 올려 뚜껑을 덮어 녹여줍니다."
+        name: "##",
+        category: "luxury",      // 고급진
+        usesEgg: true,
+        usesCheese: true,
+        desc: "##",
+        howto: "##"
       },
       {
         id: 2,
-        name: "불닭마요 볶음밥",
-        tags: ["%%매운%%", "%%든든한%%", "%%밥 요리%%"],
-        desc: "남은 밥과 불닭 하나로 만드는 야식용 볶음밥.",
-        howto:
-          "1) 밥, 불닭소스, 계란을 같이 볶고,\n" +
-          "2) 마지막에 마요네즈를 뿌려 고소함을 더합니다."
+        name: "##",
+        category: "creamy",      // 크리미한
+        usesEgg: false,
+        usesCheese: true,
+        desc: "##",
+        howto: "##"
       },
       {
         id: 3,
-        name: "불닭또띠아 피자",
-        tags: ["%%자극적인%%", "%%술안주%%", "%%바삭한%%"],
-        desc: "또띠아(또는 식빵) 위에 불닭과 치즈를 올려 굽는 간단 피자.",
-        howto:
-          "1) 불닭을 미리 볶아 두고,\n" +
-          "2) 또띠아 위에 올린 뒤 치즈를 얹어 에어프라이어/오븐에 구워요."
+        name: "##",
+        category: "meat",        // 고기와 함께
+        usesEgg: true,
+        usesCheese: false,
+        desc: "##",
+        howto: "##"
+      },
+      {
+        id: 4,
+        name: "##",
+        category: "buldaghetti", // 불닭게티
+        usesEgg: false,
+        usesCheese: false,
+        desc: "##",
+        howto: "##"
       }
     ];
 
-    // 점수 계산 로직 틀
+    // 점수 계산 로직 (간단 rule-based)
     function scoreRecipe(recipe, answers) {
       let score = 0;
 
-      // %%여기에 형용사 기준 점수 계산 로직 작성%%
-      // 예시 (나중에 네가 고치면 됨):
+      // 카테고리 일치 여부
+      if (recipe.category === answers.category) {
+        score += 5;
+      }
+
+      // 계란 사용
+      if (answers.egg && recipe.usesEgg) score += 3;
+      if (answers.egg && !recipe.usesEgg) score -= 1;
+
+      // 치즈 사용
+      if (answers.cheese && recipe.usesCheese) score += 3;
+      if (answers.cheese && !recipe.usesCheese) score -= 1;
+
+      return score;
+    }
+
+    // 폼 제출 처리
+    document.getElementById("question-form").addEventListener("submit", function (e) {
+      e.preventDefault();
+
+      const form = e.target;
+      const category = form.elements["category"].value;
+      const egg = form.elements["egg"].checked;
+      const cheese = form.elements["cheese"].checked;
+
+      const answers = { category, egg, cheese };
+
+      const scored = recipes
+        .map((r) => ({
+          ...r,
+          score: scoreRecipe(r, answers)
+        }))
+        .sort((a, b) => b.score - a.score)
+        .slice(0, 3);
+
+      const resultsDiv = document.getElementById("results");
+      resultsDiv.innerHTML = "<h2>추천 레시피</h2>";
+
+      if (!scored.length || scored[0].score <= 0) {
+        resultsDiv.innerHTML +=
+          '<p class="no-result">조건에 맞는 레시피가 아직 없어요. 조합을 조금 바꿔보세요.</p>';
+        return;
+      }
+
+      scored.forEach((r) => {
+        const el = document.createElement("div");
+        el.className = "recipe-card";
+        el.innerHTML = `
+          <div class="recipe-title">${r.name}</div>
+          <div class="recipe-tags">##</div>
+          <div class="recipe-desc">${r.desc}</div>
+          <div class="recipe-howto">${r.howto}</div>
+        `;
+        resultsDiv.appendChild(el);
+      });
+    });
+  </script>
+</body>
+</html>
