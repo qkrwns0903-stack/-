@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>화끈한 불닭 레시피</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      background-color: #ffefe6;
+    }
+    .container {
+      max-width: 900px;
+      margin: 40px auto;
+      background: #ffffff;
+      padding: 24px 28px 32px;
+      border-radius: 16px;
+      box-shadow: 0 12px 32px rgba(0,0,0,0.08);
+    }
+    h1 {
+      margin-top: 0;
+      text-align: center;
+    }
+    .back {
+      margin-bottom: 16px;
+    }
+    .back a {
+      text-decoration: none;
+      color: #ff6633;
+      font-size: 14px;
+    }
+
+    /* 레시피 카드 레이아웃 - 이미지 왼쪽, 내용 오른쪽 */
+    .recipe-card {
+      display: flex;
+      align-items: center;
+      background: #fff7f7;
+      border-radius: 12px;
+      padding: 14px 16px;
+      margin-bottom: 12px;
+      border: 1px solid #ffd4d4;
+      gap: 16px; /* 이미지와 텍스트 사이 간격 */
+    }
+
+    .recipe-image {
+      width: 140px;
+      height: 100px;
+      border-radius: 10px;
+      object-fit: cover;
+      flex-shrink: 0;
+    }
+
+    .recipe-content {
+      flex: 1;
+    }
+
+    .recipe-title a {
+      font-weight: 700;
+      margin-bottom: 4px;
+      font-size: 18px;
+      text-decoration: none;
+      color: #222;
+    }
+
+    .recipe-title a:hover {
+      text-decoration: underline;
+      color: #ff6633;
+    }
+
+    .recipe-tags {
+      font-size: 12px;
+      color: #666;
+      margin-bottom: 8px;
+    }
+    .recipe-desc {
+      font-size: 14px;
+      margin-bottom: 4px;
+    }
+    .recipe-howto {
+      font-size: 13px;
+      color: #555;
+      white-space: pre-line;
+    }
+
+    /* 화면이 좁을 때(모바일) 세로로 쌓이게 */
+    @media (max-width: 600px) {
+      .recipe-card {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+      .recipe-image {
+        width: 100%;
+        height: 180px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="back">
+      <a href="index.html">← 메인으로 돌아가기</a>
+    </div>
+
+    <h1>🌶️ 화끈한 불닭 레시피</h1>
+
+    <!-- 레시피 1 -->
+    <div class="recipe-card">
+      <img src="images/gochubob.jpg" alt="고추 폭탄 비빔 불닭" class="recipe-image">
+      <div class="recipe-content">
+        <div class="recipe-title">
+          <!-- 새 창에서 열기: target="_blank" -->
+          <a href="gochubob.html" target="_blank" rel="noopener noreferrer">
+            고추 폭탄 비빔 불닭
+          </a>
+        </div>
+        <div class="recipe-desc">
+          고추기름과 청양고추가 만나 폭발하는 불맛 볶음면!
+        </div>
+      </div>
+    </div>
+
+    <!-- 레시피 2 -->
+    <div class="recipe-card">
+      <img src="images/hellmara.jpg" alt="지옥 마라 불닭" class="recipe-image">
+      <div class="recipe-content">
+        <div class="recipe-title">
+          <a href="hellmara.html" target="_blank" rel="noopener noreferrer">
+            지옥 마라 불닭
+          </a>
+        </div>
+        <div class="recipe-desc">
+          불닭에 마라 소스 투하! 입안에 마비가 오는 마라불닭 완성!
+        </div>
+      </div>
+    </div>
+
+    <!-- 레시피 3 -->
+    <div class="recipe-card">
+      <img src="images/kimchi.jpg" alt="불닭김치볶음면" class="recipe-image">
+      <div class="recipe-content">
+        <div class="recipe-title">
+          <a href="kimchi.html" target="_blank" rel="noopener noreferrer">
+            불닭김치볶음면
+          </a>
+        </div>
+        <div class="recipe-desc">
+         불닭면에 불 켜고 김치·고춧가루·청양 폭격 후 참기름 한 방울로 마무리하는 화끈 김치불닭!
+        </div>
+      </div>
+    </div>
+
+    <!-- 레시피 4 -->
+    <div class="recipe-card">
+      <img src="images/morespicy.jpg" alt="더 매운 불닭볶음면" class="recipe-image">
+      <div class="recipe-content">
+        <div class="recipe-title">
+          <a href="cold-noodle.html" target="_blank" rel="noopener noreferrer">
+            더 매운 불닭볶음면
+          </a>
+        </div>
+        <div class="recipe-desc">
+         불닭에 청양고추 팍팍! 더맵게 팍팍!
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

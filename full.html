@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>시원한 불닭 레시피</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      background-color: #ffefe6;
+    }
+    .container {
+      max-width: 900px;
+      margin: 40px auto;
+      background: #ffffff;
+      padding: 24px 28px 32px;
+      border-radius: 16px;
+      box-shadow: 0 12px 32px rgba(0,0,0,0.08);
+    }
+    h1 {
+      margin-top: 0;
+      text-align: center;
+    }
+    .back {
+      margin-bottom: 16px;
+    }
+    .back a {
+      text-decoration: none;
+      color: #ff6633;
+      font-size: 14px;
+    }
+
+    /* 레시피 카드 레이아웃 - 이미지 왼쪽, 내용 오른쪽 */
+    .recipe-card {
+      display: flex;
+      align-items: center;
+      background: #fff7f7;
+      border-radius: 12px;
+      padding: 14px 16px;
+      margin-bottom: 12px;
+      border: 1px solid #ffd4d4;
+      gap: 16px; /* 이미지와 텍스트 사이 간격 */
+    }
+
+    .recipe-image {
+      width: 140px;
+      height: 100px;
+      border-radius: 10px;
+      object-fit: cover;
+      flex-shrink: 0;
+    }
+
+    .recipe-content {
+      flex: 1;
+    }
+
+    .recipe-title a {
+      font-weight: 700;
+      margin-bottom: 4px;
+      font-size: 18px;
+      text-decoration: none;
+      color: #222;
+    }
+
+    .recipe-title a:hover {
+      text-decoration: underline;
+      color: #ff6633;
+    }
+
+    .recipe-tags {
+      font-size: 12px;
+      color: #666;
+      margin-bottom: 8px;
+    }
+    .recipe-desc {
+      font-size: 14px;
+      margin-bottom: 4px;
+    }
+    .recipe-howto {
+      font-size: 13px;
+      color: #555;
+      white-space: pre-line;
+    }
+
+    /* 화면이 좁을 때(모바일) 세로로 쌓이게 */
+    @media (max-width: 600px) {
+      .recipe-card {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+      .recipe-image {
+        width: 100%;
+        height: 180px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="back">
+      <a href="index.html">← 메인으로 돌아가기</a>
+    </div>
+
+    <h1>🍖 든든한 불닭 레시피</h1>
+
+    <!-- 레시피 1 -->
+    <div class="recipe-card">
+      <img src="images/gbb.jpg" alt="까르보불닭볶음밥" class="recipe-image">
+      <div class="recipe-content">
+        <div class="recipe-title">
+          <!-- 새 창에서 열기: target="_blank" -->
+          <a href="gbb.html" target="_blank" rel="noopener noreferrer">
+            까르보불닭볶음밥
+          </a>
+        </div>
+        <div class="recipe-desc">
+          고슬하게 볶아준 후 까르보 액상+분말스프로 코팅하면 미쳤다… 크리미 불닭 볶음밥 완성!
+        </div>
+      </div>
+    </div>
+
+    <!-- 레시피 2 -->
+    <div class="recipe-card">
+      <img src="images/bdk.jpg" alt="불닭 카레" class="recipe-image">
+      <div class="recipe-content">
+        <div class="recipe-title">
+          <a href="bdk.html" target="_blank" rel="noopener noreferrer">
+            불닭 카레
+          </a>
+        </div>
+        <div class="recipe-desc">
+          불닭 우동계의 종결자.
+        </div>
+      </div>
+    </div>
+
+    <!-- 레시피 3 -->
+    <div class="recipe-card">
+      <img src="bts.jpg" alt="방탄 정국 불마요 들기름 막국수 레시피" class="recipe-image">
+      <div class="recipe-content">
+        <div class="recipe-title">
+          <a href="bts.html" target="_blank" rel="noopener noreferrer">
+            방탄 정국 불마요 들기름 막국수 레시피
+          </a>
+        </div>
+        <div class="recipe-desc">
+          메밀에 들기름 향 쫙 깔고, 불닭·불마요로 매콤꾸덕 코팅한 다음 노른자 톡— 김자반으로 마무리하면… 이건 불닭 비빔면의 사무라이 버전.
+        </div>
+      </div>
+    </div>
+
+    <!-- 레시피 4 -->
+    <div class="recipe-card">
+      <img src="enhypn.jpg" alt="엔하이픈 제이크 까르보불닭 리조또 레시피" class="recipe-image">
+      <div class="recipe-content">
+        <div class="recipe-title">
+          <a href="enhypn.html" target="_blank" rel="noopener noreferrer">
+            엔하이픈 제이크 까르보불닭 리조또 레시피
+          </a>
+        </div>
+        <div class="recipe-desc">
+          면을 때려부수고 밥까지 투척한 뒤 우유로 부드럽게 조지고 불닭소스로 마무리하면… 치트키급 중독성의 ‘까르보라죽’ 탄생!
+        </div>
+      </div>
+    </div>
+
+        <!-- 레시피 5 -->
+    <div class="recipe-card">
+      <img src="buldakgaetti.jpg" alt="불닭게티" class="recipe-image">
+      <div class="recipe-content">
+        <div class="recipe-title">
+          <a href="buldakgaetti.html" target="_blank" rel="noopener noreferrer">
+           불닭게티
+          </a>
+        </div>
+        <div class="recipe-desc">
+            짜파게티의 풍미 + 불닭의 화력 + 모짜렐라 치즈의 치즈폭발 조합!
+        </div>
+      </div>
+    </div>
+   
+    <div class="recipe-card">
+      <img src="bulgaechi.jpg" alt="불계치" class="recipe-image">
+      <div class="recipe-content">
+        <div class="recipe-title">
+          <a href="bulgaechi.html" target="_blank" rel="noopener noreferrer">
+            불계치
+          </a>
+        </div>
+        <div class="recipe-desc">
+          불닭 + 치즈 + 반숙후라이 = 무조건 맛있는 공식
+        </div>
+      </div>
+    </div>        
+   
+        <div class="recipe-card">
+      <img src="gaeranchim.jpg" alt="계란찜 품은 불닭" class="recipe-image">
+      <div class="recipe-content">
+        <div class="recipe-title">
+          <a href="gaeranchim.html" target="_blank" rel="noopener noreferrer">
+            계란찜 품은 불닭
+          </a>
+        </div>
+        <div class="recipe-desc">
+         계란찜 위에 불닭 얹고 치즈 녹이면 인생 맵부심 요리 탄생
+        </div>
+      </div>
+    </div>
+
+    <div class="recipe-card">
+      <img src="omlet.jpg" alt="불닭 오믈렛" class="recipe-image">
+      <div class="recipe-content">
+        <div class="recipe-title">
+          <a href="omlet.html" target="_blank" rel="noopener noreferrer">
+            불닭 오믈렛
+          </a>
+        </div>
+        <div class="recipe-desc">
+          버터 계란지단 속 소세지 불닭 치즈 폴딩
+        </div>
+      </div>
+    </div>
+
+    <div class="recipe-card">
+      <img src="tunamayo-bibim-buldak.jpg" alt="참치마요 비빔 불닭" class="recipe-image">
+      <div class="recipe-content">
+        <div class="recipe-title">
+          <a href="tunamayo-bibim-buldak.html" target="_blank" rel="noopener noreferrer">
+            참치마요 비빔 불닭
+          </a>
+        </div>
+        <div class="recipe-desc">
+          면을 때려부수고 밥까지 투척한 뒤 우유로 부드럽게 조지고 불닭소스로 마무리하면… 치트키급 중독성의 ‘까르보라죽’ 탄생!
+        </div>
+      </div>
+    </div>
+   
+    <div class="recipe-card">
+      <img src="enhypn.jpg" alt="엔하이픈 제이크 까르보불닭 리조또 레시피" class="recipe-image">
+      <div class="recipe-content">
+        <div class="recipe-title">
+          <a href="enhypn.html" target="_blank" rel="noopener noreferrer">
+            엔하이픈 제이크 까르보불닭 리조또 레시피
+          </a>
+        </div>
+        <div class="recipe-desc">
+          면을 때려부수고 밥까지 투척한 뒤 우유로 부드럽게 조지고 불닭소스로 마무리하면… 치트키급 중독성의 ‘까르보라죽’ 탄생!
+        </div>
+      </div>
+    </div>
+
+    </div>
+</body>
+</html>
