@@ -46,6 +46,28 @@
         .btn:hover {
             background-color: #e60000;
         }
+        .categories {
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.cat {
+    background-color: #fff;
+    border: 2px solid #ff6633;
+    padding: 12px 18px;
+    border-radius: 12px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.cat:hover {
+    background-color: #ff6633;
+    color: #fff;
+}
     </style>
 </head>
 <body>
@@ -55,7 +77,13 @@
     <main>
         <img src="https://i.ibb.co/1RWtTQ5/buldak.png" alt="불닭볶음면 이미지">
         <p>매운맛 레벨 딱 맞는 불닭 레시피 추천받기!</p>
-        <button class="btn">레시피 추천받기</button>
+        <div class="categories">
+    <button class="cat">🧀 크리미한</button>
+    <button class="cat">❄️ 시원한</button>
+    <button class="cat">🍯 단짠단짠</button>
+    <button class="cat">🌶️ 화끈한</button>
+    <button class="cat">🍖 든든한</button> 
+</div>
     </main>
 
 </body>
