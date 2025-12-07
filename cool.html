@@ -29,17 +29,44 @@
       color: #ff6633;
       font-size: 14px;
     }
+
+    /* 레시피 카드 레이아웃 - 이미지 왼쪽, 내용 오른쪽 */
     .recipe-card {
+      display: flex;
+      align-items: center;
       background: #fff7f7;
       border-radius: 12px;
       padding: 14px 16px;
       margin-bottom: 12px;
       border: 1px solid #ffd4d4;
+      gap: 16px; /* 이미지와 텍스트 사이 간격 */
     }
-    .recipe-title {
+
+    .recipe-image {
+      width: 140px;
+      height: 100px;
+      border-radius: 10px;
+      object-fit: cover;
+      flex-shrink: 0;
+    }
+
+    .recipe-content {
+      flex: 1;
+    }
+
+    .recipe-title a {
       font-weight: 700;
       margin-bottom: 4px;
+      font-size: 18px;
+      text-decoration: none;
+      color: #222;
     }
+
+    .recipe-title a:hover {
+      text-decoration: underline;
+      color: #ff6633;
+    }
+
     .recipe-tags {
       font-size: 12px;
       color: #666;
@@ -54,6 +81,18 @@
       color: #555;
       white-space: pre-line;
     }
+
+    /* 화면이 좁을 때(모바일) 세로로 쌓이게 */
+    @media (max-width: 600px) {
+      .recipe-card {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+      .recipe-image {
+        width: 100%;
+        height: 180px;
+      }
+    }
   </style>
 </head>
 <body>
@@ -66,34 +105,79 @@
 
     <!-- 레시피 1 -->
     <div class="recipe-card">
-      <div class="recipe-title">크림 불닭 파스타</div>
-      <div class="recipe-tags">크리미한 · 파스타</div>
-      <div class="recipe-desc">
-        생크림과 치즈로 매운맛을 부드럽게 잡은 불닭 파스타 레시피.
-      </div>
-      <div class="recipe-howto">
-1) 면을 삶고, 불닭을 미리 조리해 한입 크기로 잘라 둡니다.
-2) 팬에 생크림과 불닭 소스를 넣고 약불에서 끓입니다.
-3) 삶은 면과 불닭을 넣고 소스가 걸쭉해질 때까지 볶아줍니다.
-4) 마지막에 모짜렐라 치즈를 올리고 뚜껑을 덮어 녹여서 완성!
+      <img src="buldak-ice-salad-noodle.jpg" alt="불닭 얼음 샐러드 누들" class="recipe-image">
+      <div class="recipe-content">
+        <div class="recipe-title">
+          <!-- 새 창에서 열기: target="_blank" -->
+          <a href="buldak-ice-salad-noodle.html" target="_blank" rel="noopener noreferrer">
+            불닭 얼음 샐러드 누들
+          </a>
+        </div>
+        <div class="recipe-desc">
+          얼음물로 찬바람 맞은 불닭면을 양상추·오이·토마토 위에 착지시키고, 불닭+오리엔탈 폭격 소스 뿌려 상큼불맛 샐러드 완성!
+        </div>
       </div>
     </div>
 
-    <!-- 레시피 2 (원하면 더 추가 가능) -->
+    <!-- 레시피 2 -->
     <div class="recipe-card">
-      <div class="recipe-title">크림 불닭 리조또</div>
-      <div class="recipe-tags">크리미한 · 밥요리</div>
-      <div class="recipe-desc">
-        남은 밥과 불닭 하나로 만드는 크리미한 한 그릇 요리.
-      </div>
-      <div class="recipe-howto">
-1) 팬에 버터를 두르고 밥을 살짝 볶아 줍니다.
-2) 생크림, 우유, 불닭 소스를 넣고 잘 섞어줍니다.
-3) 잘게 자른 불닭을 넣고 농도가 질어질 때까지 끓입니다.
-4) 위에 파마산 치즈를 뿌리면 완성!
+      <img src="buldak-cold-pasta.jpg" alt="불닭 냉파스타(올리브오일 베이스)" class="recipe-image">
+      <div class="recipe-content">
+        <div class="recipe-title">
+          <a href="buldak-cold-pasta.html" target="_blank" rel="noopener noreferrer">
+            불닭 냉파스타(올리브오일 베이스)
+          </a>
+        </div>
+        <div class="recipe-desc">
+          얼음물로 정신 번쩍 난 불닭면에 레몬 올리브 오일 드레싱 입히고, 토마토·바질 얹어 상큼하게 폭주하는 불닭 파스타 완성!
+        </div>
       </div>
     </div>
 
+    <!-- 레시피 3 -->
+    <div class="recipe-card">
+      <img src="buldak-yogurt-cold-noodle.jpg" alt="불닭 요거트 콜드누들" class="recipe-image">
+      <div class="recipe-content">
+        <div class="recipe-title">
+          <a href="buldak-yogurt-cold-noodle.html" target="_blank" rel="noopener noreferrer">
+            불닭 요거트 콜드누들
+          </a>
+        </div>
+        <div class="recipe-desc">
+          얼음물 목욕한 불닭면에 요거트·마요 고소폭탄 소스 입히고 오이채 샤라락 얹어 시원하고 미친 매콤함 발사!
+        </div>
+      </div>
+    </div>
+
+    <!-- 레시피 4 -->
+    <div class="recipe-card">
+      <img src="buldak-cold-noodle.jpg" alt="불닭 냉라면" class="recipe-image">
+      <div class="recipe-content">
+        <div class="recipe-title">
+          <a href="cold-noodle.html" target="_blank" rel="noopener noreferrer">
+            불닭 냉라면
+          </a>
+        </div>
+        <div class="recipe-desc">
+          물 샤워한 불닭면에 소스 바르고 냉면 육수 부어서 얼음 폭포 매운맛 냉불닭 완성!
+        </div>
+      </div>
+    </div>
+
+        <!-- 레시피 5 -->
+    <div class="recipe-card">
+      <img src="buldak-cold-bokkeum-myeon.jpg" alt="냉불닭볶음면" class="recipe-image">
+      <div class="recipe-content">
+        <div class="recipe-title">
+          <a href="buldak-cold-bokkeum-myeon.html" target="_blank" rel="noopener noreferrer">
+           냉불닭볶음면
+          </a>
+        </div>
+        <div class="recipe-desc">
+          얼음물로 정신 차린 불닭면에 참깨·김가루 팍 뿌려 고소한 한방 날리는 불맛 비빔면 완성!
+        </div>
+      </div>
+    </div>
   </div>
 </body>
 </html>

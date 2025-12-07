@@ -29,17 +29,44 @@
       color: #ff6633;
       font-size: 14px;
     }
+
+    /* 레시피 카드 레이아웃 - 이미지 왼쪽, 내용 오른쪽 */
     .recipe-card {
+      display: flex;
+      align-items: center;
       background: #fff7f7;
       border-radius: 12px;
       padding: 14px 16px;
       margin-bottom: 12px;
       border: 1px solid #ffd4d4;
+      gap: 16px; /* 이미지와 텍스트 사이 간격 */
     }
-    .recipe-title {
+
+    .recipe-image {
+      width: 140px;
+      height: 100px;
+      border-radius: 10px;
+      object-fit: cover;
+      flex-shrink: 0;
+    }
+
+    .recipe-content {
+      flex: 1;
+    }
+
+    .recipe-title a {
       font-weight: 700;
       margin-bottom: 4px;
+      font-size: 18px;
+      text-decoration: none;
+      color: #222;
     }
+
+    .recipe-title a:hover {
+      text-decoration: underline;
+      color: #ff6633;
+    }
+
     .recipe-tags {
       font-size: 12px;
       color: #666;
@@ -54,6 +81,18 @@
       color: #555;
       white-space: pre-line;
     }
+
+    /* 화면이 좁을 때(모바일) 세로로 쌓이게 */
+    @media (max-width: 600px) {
+      .recipe-card {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+      .recipe-image {
+        width: 100%;
+        height: 180px;
+      }
+    }
   </style>
 </head>
 <body>
@@ -66,33 +105,95 @@
 
     <!-- 레시피 1 -->
     <div class="recipe-card">
-      <div class="recipe-title">크림 불닭 파스타</div>
-      <div class="recipe-tags">크리미한 · 파스타</div>
-      <div class="recipe-desc">
-        생크림과 치즈로 매운맛을 부드럽게 잡은 불닭 파스타 레시피.
-      </div>
-      <div class="recipe-howto">
-1) 면을 삶고, 불닭을 미리 조리해 한입 크기로 잘라 둡니다.
-2) 팬에 생크림과 불닭 소스를 넣고 약불에서 끓입니다.
-3) 삶은 면과 불닭을 넣고 소스가 걸쭉해질 때까지 볶아줍니다.
-4) 마지막에 모짜렐라 치즈를 올리고 뚜껑을 덮어 녹여서 완성!
+      <img src="ziracksil-leeyoungji.jpg" alt="지구오락실 이영지 레시피" class="recipe-image">
+      <div class="recipe-content">
+        <div class="recipe-title">
+          <!-- 새 창에서 열기: target="_blank" -->
+          <a href="ziracksil-leeyoungji.html" target="_blank" rel="noopener noreferrer">
+            지구오락실 이영지 레시피
+          </a>
+        </div>
+        <div class="recipe-desc">
+          두 주먹의 모짜렐라와 체다 치즈로 불맛에 고소함을 더하고, 참기름으로 한국적인 풍미를 살린 래퍼 이영지표 불닭 레시피.
+        </div>
       </div>
     </div>
 
-    <!-- 레시피 2 (원하면 더 추가 가능) -->
+    <!-- 레시피 2 -->
     <div class="recipe-card">
-      <div class="recipe-title">크림 불닭 리조또</div>
-      <div class="recipe-tags">크리미한 · 밥요리</div>
-      <div class="recipe-desc">
-        남은 밥과 불닭 하나로 만드는 크리미한 한 그릇 요리.
-      </div>
-      <div class="recipe-howto">
-1) 팬에 버터를 두르고 밥을 살짝 볶아 줍니다.
-2) 생크림, 우유, 불닭 소스를 넣고 잘 섞어줍니다.
-3) 잘게 자른 불닭을 넣고 농도가 질어질 때까지 끓입니다.
-4) 위에 파마산 치즈를 뿌리면 완성!
+      <img src="fried-mushroom-cream-buldak.jpg" alt="구운 양송이 크림 불닭" class="recipe-image">
+      <div class="recipe-content">
+        <div class="recipe-title">
+          <a href="fried-mushroom-cream-buldak.html" target="_blank" rel="noopener noreferrer">
+            구운 양송이 크림 불닭
+          </a>
+        </div>
+        <div class="recipe-desc">
+          버터에 구운 양송이의 풍미와 우유 크림으로 매콤함을 부드럽게 감싼 고급스러운 퓨전 불닭 레시피.
+        </div>
       </div>
     </div>
+
+    <!-- 레시피 3 -->
+    <div class="recipe-card">
+      <img src="carbo-buldak-bokkeumbap.jpg" alt="까르보불닭볶음밥" class="recipe-image">
+      <div class="recipe-content">
+        <div class="recipe-title">
+          <a href="carbo-buldak-bokkeumbap.html" target="_blank" rel="noopener noreferrer">
+            까르보불닭볶음밥
+          </a>
+        </div>
+        <div class="recipe-desc">
+          계란 스크램블과 밥을 볶아 고소함을 더하고, 까르보불닭 스프의 풍미로 매콤하고 든든한 한 끼를 완성하는 초간단 볶음밥 레시피.
+        </div>
+      </div>
+    </div>
+
+    <!-- 레시피 4 -->
+    <div class="recipe-card">
+      <img src="enhypen.jpg" alt="엔하이픈 제이크 까르보불닭 리조또 레시피" class="recipe-image">
+      <div class="recipe-content">
+        <div class="recipe-title">
+          <a href="enhypen.html" target="_blank" rel="noopener noreferrer">
+            엔하이픈 제이크 까르보불닭 리조또 레시피
+          </a>
+        </div>
+        <div class="recipe-desc">
+          부순 면과 밥, 우유로 끓여 꾸덕한 식감을 살리고, 파슬리로 마무리해 든든함과 부드러움을 모두 잡은 퓨전 리조또 레시피.
+        </div>
+      </div>
+    </div>
+
+        <!-- 레시피 5 -->
+    <div class="recipe-card">
+      <img src="ziracksil-choijaeyoung.jpg" alt="지구오락실 최재영 작가 레시피" class="recipe-image">
+      <div class="recipe-content">
+        <div class="recipe-title">
+          <a href="ziracksil-choijaeyoung.html" target="_blank" rel="noopener noreferrer">
+           지구오락실 최재영 작가 레시피
+          </a>
+        </div>
+        <div class="recipe-desc">
+          볶은 양파의 감칠맛과 체다 치즈로 깊이를 더하고, 달걀 노른자와 마요네즈로 극강의 부드러움을 완성한 특제 불닭 레시피.
+        </div>
+      </div>
+    </div>
+
+        <!-- 레시피 6 -->
+    <div class="recipe-card">
+      <img src="cream-cheese-buldak-bokkeummyeon.jpg" alt="크림치즈 불닭볶음면" class="recipe-image">
+      <div class="recipe-content">
+        <div class="recipe-title">
+          <a href="cream-cheese-buldak-bokkeummyeon.html" target="_blank" rel="noopener noreferrer">
+           크림치즈 불닭볶음면
+          </a>
+        </div>
+        <div class="recipe-desc">
+          버터 마늘 향과 생크림의 부드러움에 모차렐라 치즈를 더해 풍미를 끌어올린 불닭 파스타 레시피.
+        </div>
+      </div>
+    </div>
+
 
   </div>
 </body>
