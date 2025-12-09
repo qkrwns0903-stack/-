@@ -30,7 +30,7 @@
       font-size: 14px;
     }
 
-    /* 레시피 카드 레이아웃 - 이미지 왼쪽, 내용 오른쪽 */
+    /* 레시피 카드 레이아웃 */
     .recipe-card {
       display: flex;
       align-items: center;
@@ -39,7 +39,7 @@
       padding: 14px 16px;
       margin-bottom: 12px;
       border: 1px solid #ffd4d4;
-      gap: 16px; /* 이미지와 텍스트 사이 간격 */
+      gap: 16px;
     }
 
     .recipe-image {
@@ -72,17 +72,13 @@
       color: #666;
       margin-bottom: 8px;
     }
+
     .recipe-desc {
       font-size: 14px;
       margin-bottom: 4px;
     }
-    .recipe-howto {
-      font-size: 13px;
-      color: #555;
-      white-space: pre-line;
-    }
 
-    /* 화면이 좁을 때(모바일) 세로로 쌓이게 */
+    /* 모바일 */
     @media (max-width: 600px) {
       .recipe-card {
         flex-direction: column;
@@ -108,8 +104,9 @@
       <img src="ziracksil-leeyoungji.png" alt="지구오락실 이영지 레시피" class="recipe-image">
       <div class="recipe-content">
         <div class="recipe-title">
-          <!-- 새 창에서 열기: target="_blank" -->
-          <a href="ziracksil-leeyoungji.html" class="recipe-title">지구오락실 이영지 레시피</a>
+          <a href="ziracksil-leeyoungji.html">
+            지구오락실 이영지 레시피
+          </a>
         </div>
         <div class="recipe-desc">
           두 주먹의 모짜렐라와 체다 치즈로 불맛에 고소함을 더하고, 참기름으로 한국적인 풍미를 살린 래퍼 이영지표 불닭 레시피.
@@ -122,7 +119,7 @@
       <img src="fried-mushroom-cream-buldak.png" alt="구운 양송이 크림 불닭" class="recipe-image">
       <div class="recipe-content">
         <div class="recipe-title">
-          <a href="fried-mushroom-cream-buldak.html" target="_blank" rel="noopener noreferrer">
+          <a href="fried-mushroom-cream-buldak.html">
             구운 양송이 크림 불닭
           </a>
         </div>
@@ -137,7 +134,7 @@
       <img src="carbo-buldak-bokkeumbap.png" alt="까르보불닭볶음밥" class="recipe-image">
       <div class="recipe-content">
         <div class="recipe-title">
-          <a href="carbo-buldak-bokkeumbap.html" target="_blank" rel="noopener noreferrer">
+          <a href="carbo-buldak-bokkeumbap.html">
             까르보불닭볶음밥
           </a>
         </div>
@@ -147,13 +144,12 @@
       </div>
     </div>
 
-
     <!-- 레시피 4 -->
     <div class="recipe-card">
       <img src="enhypen.png" alt="엔하이픈 제이크 까르보불닭 리조또 레시피" class="recipe-image">
       <div class="recipe-content">
         <div class="recipe-title">
-          <a href="enhypen.html" target="_blank" rel="noopener noreferrer">
+          <a href="enhypen.html">
             엔하이픈 제이크 까르보불닭 리조또 레시피
           </a>
         </div>
@@ -163,12 +159,12 @@
       </div>
     </div>
 
-        <!-- 레시피 5 -->
+    <!-- 레시피 5 -->
     <div class="recipe-card">
       <img src="ziracksil-choijaeyoung.png" alt="지구오락실 최재영 작가 레시피" class="recipe-image">
       <div class="recipe-content">
         <div class="recipe-title">
-          <a href="ziracksil-choijaeyoung.html" target="_blank" rel="noopener noreferrer">
+          <a href="ziracksil-choijaeyoung.html">
            지구오락실 최재영 작가 레시피
           </a>
         </div>
@@ -178,12 +174,12 @@
       </div>
     </div>
 
-        <!-- 레시피 6 -->
+    <!-- 레시피 6 -->
     <div class="recipe-card">
       <img src="cream-cheese-buldak-bokkeummyeon.png" alt="크림치즈 불닭볶음면" class="recipe-image">
       <div class="recipe-content">
         <div class="recipe-title">
-          <a href="cream-cheese-buldak-bokkeummyeon.html" target="_blank" rel="noopener noreferrer">
+          <a href="cream-cheese-buldak-bokkeummyeon.html">
            크림치즈 불닭볶음면
           </a>
         </div>
@@ -192,7 +188,6 @@
         </div>
       </div>
     </div>
-
 
   </div>
 </body>
