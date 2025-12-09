@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>불닭 낄여오너라</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <h1 class="title">🔥 불닭 낄여오너라 🔥</h1>
+
+  <div class="category-container">
+    <div class="category">크리미한</div>
+    <div class="category">시원한</div>
+    <div class="category">단짠단짠</div>
+    <div class="category">화끈한</div>
+    <div class="category">든든한</div>
+  </div>
+
+<script src="script.js"></script>
+</body>
+</html>
+
+body {
+  font-family: "Pretendard", sans-serif;
+  margin: 0;
+  padding: 40px;
+  background: #fff7f2;
+  text-align: center;
+}
+
+.title {
+  font-size: 32px;
+  font-weight: 800;
+  margin-bottom: 40px;
+}
+
+.category-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.category {
+  background: white;
+  border: 2px solid #ff6b00;
+  padding: 15px 28px;
+  border-radius: 15px;
+  font-size: 18px;
+  font-weight: 600;
+  transition: 0.25s;
+  cursor: pointer;
+}
+
+.category:hover {
+  background: #ff6b00;
+  color: white;
+  transform: scale(1.07);
+}
+const categories = document.querySelectorAll(".category");
+
+categories.forEach((box) => {
+  box.addEventListener("click", () => {
+    alert(`${box.innerText} 카테고리를 선택했습니다!`);
+  });
+});
+
