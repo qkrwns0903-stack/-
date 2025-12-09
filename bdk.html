@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>불닭카레 레시피</title>
+
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      background-color: #ffefe6;
+      color: #333;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: 24px auto;
+      padding: 20px 16px 32px;
+      background: #ffffff;
+      border-radius: 16px;
+      box-shadow: 0 10px 28px rgba(0, 0, 0, 0.1);
+      box-sizing: border-box;
+    }
+
+    h1 {
+      text-align: center;
+      margin: 0 0 20px 0;
+      font-size: 2rem;
+    }
+
+    .recipe-image {
+      display: block;
+      margin: 0 auto 20px auto;
+      width: min(15cm, 90%);
+      aspect-ratio: 16 / 9;
+      object-fit: cover;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+    }
+
+    .section-title {
+      font-size: 1.3rem;
+      font-weight: 700;
+      margin: 16px 0 4px 0; 
+    }
+
+    .desc {
+      font-size: 1rem;
+      line-height: 1.65;
+      margin-bottom: 14px;
+      color: #444;
+    }
+
+    /* 🔥 재료 리스트 아래 여백 최소화 */
+    .list {
+      font-size: 1rem;
+      line-height: 1.7;
+      margin: 0 0 2px 0;   /* 아래 여백 아주 살짝만 (2px) */
+      padding-left: 20px;
+    }
+
+    .steps {
+      margin: 4px 0 16px 0;
+      background: #fff7f7;
+      border-left: 4px solid #ff6633;
+      padding: 8px 18px 10px 18px;
+      border-radius: 8px;
+      line-height: 1.75;
+      white-space: pre-line;
+    }
+
+    .nav-links {
+      margin-top: 30px;
+      text-align: center;
+    }
+
+    .nav-links a {
+      color: #ff6633;
+      text-decoration: none;
+      font-weight: 600;
+      margin: 0 10px;
+      font-size: 1rem;
+    }
+
+    .nav-links a:hover {
+      text-decoration: underline;
+    }
+
+    /* 모바일 */
+    @media (max-width: 600px) {
+      h1 {
+        font-size: 1.6rem;
+      }
+
+      .container {
+        padding: 16px 12px 24px;
+        margin: 16px auto;
+      }
+
+      .recipe-image {
+        width: 100%;
+        height: 180px;
+        aspect-ratio: auto;
+      }
+
+      .section-title {
+        font-size: 1.2rem;
+        margin: 14px 0 4px 0;
+      }
+
+      .desc,
+      .list,
+      .steps {
+        font-size: 0.95rem;
+      }
+
+      .steps {
+        margin: 4px 0 12px 0;
+        padding: 6px 14px 8px 14px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+
+    <h1>불닭카레</h1>
+
+    <img class="recipe-image"
+         src="bdk.png"
+         alt="불닭카레">
+
+    <div class="section-title">🍝 소개</div>
+    <p class="desc">
+      우동 면 삶고, 목살·마늘·카레 국물·불닭소스로 미친 국물 만들어 졸인 뒤 지단+파 얹으면… 이건 그냥 불닭 우동계의 종결자.
+    </p>
+
+    <div class="section-title">🧾 재료 (1인분 기준)</div>
+    <ul class="list">
+      <li> 우동 면사리</li>
+      <li>혼다시</li>
+      <li>대패목심</li>
+      <li>고형 카레 1조각</li>
+      <li>파/마늘</li>
+      <li>불닭소스</li>
+      <li>계란 2개</li>
+    </ul>
+
+    <div class="section-title">👩‍🍳 조리 방법</div>
+    <div class="steps">
+1. 토핑용 파를 썰어 찬물에 담근다. 양파와 마늘을 썰어 놓는다. 
+2. 계란 2개를 풀어 계란 지단을 만든다. 
+3. 우동 면을 삶는다. (카레 국물에 한 번 더 삶기 때문에 완전히 익히지 않아도 됨)
+4. 후라이펜에 기름을 두르고 마늘을 볶아준다. 어느 정도 익으면 목살과 후추를 넣어 익혀준다. 
+5. 냄비에 물 한컵 반과 혼다시 반스푼 정도, 고형 카레 1조각을 넣어 녹여준다. 
+6. 끓기 시작하면 양파와 구운 고기를 넣고, 취향껏 불닭소스를 넣은 후 졸여준다. 
+7. 우동면을 넣은 후 조금 더 졸여준다. 
+8. 계란 및 파 토핑을 올려 완성한다. 
+    </div>
+
+    <div class="nav-links">
+      <a href="index.html">← 메인으로 돌아가기</a>
+      <a href="creamy.html">🍳 다른 레시피 보기</a>
+    </div>
+
+  </div>
+</body>
+</html>
