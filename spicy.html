@@ -30,7 +30,6 @@
       font-size: 14px;
     }
 
-    /* 레시피 카드 레이아웃 - 이미지 왼쪽, 내용 오른쪽 */
     .recipe-card {
       display: flex;
       align-items: center;
@@ -39,7 +38,7 @@
       padding: 14px 16px;
       margin-bottom: 12px;
       border: 1px solid #ffd4d4;
-      gap: 16px; /* 이미지와 텍스트 사이 간격 */
+      gap: 16px;
     }
 
     .recipe-image {
@@ -72,17 +71,12 @@
       color: #666;
       margin-bottom: 8px;
     }
+
     .recipe-desc {
       font-size: 14px;
       margin-bottom: 4px;
     }
-    .recipe-howto {
-      font-size: 13px;
-      color: #555;
-      white-space: pre-line;
-    }
 
-    /* 화면이 좁을 때(모바일) 세로로 쌓이게 */
     @media (max-width: 600px) {
       .recipe-card {
         flex-direction: column;
@@ -108,8 +102,7 @@
       <img src="gochubob.png" alt="고추 폭탄 비빔 불닭" class="recipe-image">
       <div class="recipe-content">
         <div class="recipe-title">
-          <!-- 새 창에서 열기: target="_blank" -->
-          <a href="gochubob.html" target="_blank" rel="noopener noreferrer">
+          <a href="gochubob.html">
             고추 폭탄 비빔 불닭
           </a>
         </div>
@@ -124,7 +117,7 @@
       <img src="hellmara.png" alt="지옥 마라 불닭" class="recipe-image">
       <div class="recipe-content">
         <div class="recipe-title">
-          <a href="hellmara.html" target="_blank" rel="noopener noreferrer">
+          <a href="hellmara.html">
             지옥 마라 불닭
           </a>
         </div>
@@ -139,7 +132,7 @@
       <img src="kimchi.png" alt="불닭김치볶음면" class="recipe-image">
       <div class="recipe-content">
         <div class="recipe-title">
-          <a href="kimchi.html" target="_blank" rel="noopener noreferrer">
+          <a href="kimchi.html">
             불닭김치볶음면
           </a>
         </div>
@@ -154,7 +147,7 @@
       <img src="morespicy.png" alt="더 매운 불닭볶음면" class="recipe-image">
       <div class="recipe-content">
         <div class="recipe-title">
-          <a href="cold-noodle.html" target="_blank" rel="noopener noreferrer">
+          <a href="cold-noodle.html">
             더 매운 불닭볶음면
           </a>
         </div>

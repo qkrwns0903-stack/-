@@ -30,7 +30,6 @@
       font-size: 14px;
     }
 
-    /* 레시피 카드 레이아웃 - 이미지 왼쪽, 내용 오른쪽 */
     .recipe-card {
       display: flex;
       align-items: center;
@@ -39,7 +38,7 @@
       padding: 14px 16px;
       margin-bottom: 12px;
       border: 1px solid #ffd4d4;
-      gap: 16px; /* 이미지와 텍스트 사이 간격 */
+      gap: 16px;
     }
 
     .recipe-image {
@@ -72,17 +71,12 @@
       color: #666;
       margin-bottom: 8px;
     }
+
     .recipe-desc {
       font-size: 14px;
       margin-bottom: 4px;
     }
-    .recipe-howto {
-      font-size: 13px;
-      color: #555;
-      white-space: pre-line;
-    }
 
-    /* 화면이 좁을 때(모바일) 세로로 쌓이게 */
     @media (max-width: 600px) {
       .recipe-card {
         flex-direction: column;
@@ -108,8 +102,7 @@
       <img src="buldak-mayo-toast.png" alt="불닭마요토스트" class="recipe-image">
       <div class="recipe-content">
         <div class="recipe-title">
-          <!-- 새 창에서 열기: target="_blank" -->
-          <a href="buldak-mayo-toast.html" target="_blank" rel="noopener noreferrer">
+          <a href="buldak-mayo-toast.html">
             불닭마요토스트
           </a>
         </div>
@@ -124,7 +117,7 @@
       <img src="honey-butter-salty-buldak.png" alt="허니 버터 단짠 불닭" class="recipe-image">
       <div class="recipe-content">
         <div class="recipe-title">
-          <a href="honey-butter-salty-buldak.html" target="_blank" rel="noopener noreferrer">
+          <a href="honey-butter-salty-buldak.html">
             허니 버터 단짠 불닭
           </a>
         </div>
@@ -139,7 +132,7 @@
       <img src="buldak-gaebalza.png" alt="불닭볶음면 개발자 레시피" class="recipe-image">
       <div class="recipe-content">
         <div class="recipe-title">
-          <a href="buldak-gaebalza.html" target="_blank" rel="noopener noreferrer">
+          <a href="buldak-gaebalza.html">
             불닭볶음면 개발자 레시피
           </a>
         </div>
@@ -154,7 +147,7 @@
       <img src="corn-cheese-buldak-bokkeum-myeon.png" alt="콘치즈 불닭볶음면" class="recipe-image">
       <div class="recipe-content">
         <div class="recipe-title">
-          <a href="corn-cheese-buldak-bokkeum-myeon.html" target="_blank" rel="noopener noreferrer">
+          <a href="corn-cheese-buldak-bokkeum-myeon.html">
             콘치즈 불닭볶음면
           </a>
         </div>
@@ -165,12 +158,12 @@
       </div>
     </div>
 
-        <!-- 레시피 5 -->
+    <!-- 레시피 5 -->
     <div class="recipe-card">
       <img src="tunamayo-bibim-buldak.png" alt="참치마요 비빔 불닭" class="recipe-image">
       <div class="recipe-content">
         <div class="recipe-title">
-          <a href="tunamayo-bibim-buldak.html" target="_blank" rel="noopener noreferrer">
+          <a href="tunamayo-bibim-buldak.html">
            참치마요 비빔 불닭
           </a>
         </div>
@@ -180,6 +173,7 @@
         </div>
       </div>
     </div>
+
   </div>
 </body>
 </html>
