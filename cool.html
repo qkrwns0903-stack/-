@@ -30,7 +30,6 @@
       font-size: 14px;
     }
 
-    /* 레시피 카드 레이아웃 - 이미지 왼쪽, 내용 오른쪽 */
     .recipe-card {
       display: flex;
       align-items: center;
@@ -39,7 +38,7 @@
       padding: 14px 16px;
       margin-bottom: 12px;
       border: 1px solid #ffd4d4;
-      gap: 16px; /* 이미지와 텍스트 사이 간격 */
+      gap: 16px;
     }
 
     .recipe-image {
@@ -76,13 +75,7 @@
       font-size: 14px;
       margin-bottom: 4px;
     }
-    .recipe-howto {
-      font-size: 13px;
-      color: #555;
-      white-space: pre-line;
-    }
 
-    /* 화면이 좁을 때(모바일) 세로로 쌓이게 */
     @media (max-width: 600px) {
       .recipe-card {
         flex-direction: column;
@@ -108,8 +101,7 @@
       <img src="buldak-ice-salad-noodle.png" alt="불닭 얼음 샐러드 누들" class="recipe-image">
       <div class="recipe-content">
         <div class="recipe-title">
-          <!-- 새 창에서 열기: target="_blank" -->
-          <a href="buldak-ice-salad-noodle.html" target="_blank" rel="noopener noreferrer">
+          <a href="buldak-ice-salad-noodle.html">
             불닭 얼음 샐러드 누들
           </a>
         </div>
@@ -124,7 +116,7 @@
       <img src="buldak-cold-pasta.png" alt="불닭 냉파스타(올리브오일 베이스)" class="recipe-image">
       <div class="recipe-content">
         <div class="recipe-title">
-          <a href="buldak-cold-pasta.html" target="_blank" rel="noopener noreferrer">
+          <a href="buldak-cold-pasta.html">
             불닭 냉파스타(올리브오일 베이스)
           </a>
         </div>
@@ -139,7 +131,7 @@
       <img src="buldak-yogurt-cold-noodle.png" alt="불닭 요거트 콜드누들" class="recipe-image">
       <div class="recipe-content">
         <div class="recipe-title">
-          <a href="buldak-yogurt-cold-noodle.html" target="_blank" rel="noopener noreferrer">
+          <a href="buldak-yogurt-cold-noodle.html">
             불닭 요거트 콜드누들
           </a>
         </div>
@@ -154,7 +146,7 @@
       <img src="buldak-cold-noodle.png" alt="불닭 냉라면" class="recipe-image">
       <div class="recipe-content">
         <div class="recipe-title">
-          <a href="cold-noodle.html" target="_blank" rel="noopener noreferrer">
+          <a href="cold-noodle.html">
             불닭 냉라면
           </a>
         </div>
@@ -164,12 +156,12 @@
       </div>
     </div>
 
-        <!-- 레시피 5 -->
+    <!-- 레시피 5 -->
     <div class="recipe-card">
       <img src="buldak-cold-bokkeum-myeon.png" alt="냉불닭볶음면" class="recipe-image">
       <div class="recipe-content">
         <div class="recipe-title">
-          <a href="buldak-cold-bokkeum-myeon.html" target="_blank" rel="noopener noreferrer">
+          <a href="buldak-cold-bokkeum-myeon.html">
            냉불닭볶음면
           </a>
         </div>
@@ -178,6 +170,7 @@
         </div>
       </div>
     </div>
+
   </div>
 </body>
 </html>
